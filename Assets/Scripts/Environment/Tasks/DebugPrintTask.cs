@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Environment.Tasks {
     [CreateAssetMenu(fileName = "DebugPrint Task", menuName = "DebugPrint Task")]
