@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91d740ff176d04e4ea0b128773cd0b6e, type: 3}
   m_Name: Insert Employees Task
   m_EditorClassIdentifier: Assembly-CSharp::Environment.Tasks.InsertEmployeesTask
-  readEmployeesTask: {fileID: 0}
+  readEmployeesTask: {fileID: 11400000, guid: 1171520f209b1d64bb1333b7b7a2abf4, type: 2}
   employees: []

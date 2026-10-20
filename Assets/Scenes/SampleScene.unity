@@ -5655,7 +5655,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 457571fe0713d9d42abeff8ada485e7c, type: 2}
     - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: taskQueue.list.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: 'taskQueue.list.Array.data[0]'
@@ -5669,6 +5669,10 @@ PrefabInstance:
       propertyPath: 'taskQueue.list.Array.data[2]'
       value: 
       objectReference: {fileID: 11400000, guid: 1171520f209b1d64bb1333b7b7a2abf4, type: 2}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: 'taskQueue.list.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 2f856769e89f62941a50cc9da0d76138, type: 2}
     - target: {fileID: 5694532769315531512, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
