@@ -21,7 +21,6 @@ namespace Environment.Tasks {
                 employees = new Employee[source.Length];
                 for(int i = 0; i < source.Length; i++) {
                     employees[i] = source[i];
-                    Debug.Log($"Inserted Employee: {employees[i].name}, ID: {employees[i].employeeId}, Engine Room Clearance: {employees[i].hasEngineRoomClearance}");
                 }
                 Debug.Log($"Inserted {employees.Length} employees into the InsertEmployeesTask.");
             }
