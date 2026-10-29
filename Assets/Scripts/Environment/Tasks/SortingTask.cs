@@ -35,6 +35,9 @@ namespace Environment.Tasks {
             }
         }
         int Partition(Employee[] arr, int low, int high) {
+            int random = UnityEngine.Random.Range(low, high + 1);
+            Swap(arr, random, high);
+
             Employee pivot = arr[high];
             int i = low - 1;
             for(int j = low; j < high; j++) {
