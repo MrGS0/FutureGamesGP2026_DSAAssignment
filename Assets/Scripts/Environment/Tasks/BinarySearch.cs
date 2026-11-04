@@ -32,8 +32,8 @@ namespace Environment.Tasks {
             }
             
 
-            int lowTimeIndex = Search(lowTime, sortedEmployees);
-            int highTimeIndex = Search(highTime, sortedEmployees);
+            int lowTimeIndex = Search(lowTime, sortedEmployees, false);
+            int highTimeIndex = Search(highTime, sortedEmployees, true);
             int inRangeSize;
             if(highTimeIndex - lowTimeIndex > 0) inRangeSize = highTimeIndex - lowTimeIndex;
             else inRangeSize = 0;
@@ -41,14 +41,14 @@ namespace Environment.Tasks {
             GetEmployeesInRange(lowTimeIndex, highTimeIndex, sortedEmployees, inRange);
 
         }
-        int Search(string time, Employee[] employees) {
+        int Search(string time, Employee[] employees, bool striclyAfter) {
             DateTime dateTime = DateTime.Parse(time);
             int bot = 0;
             int top = employees.Length;
 
-            while(bot < top) {
+            while(bot < top) {  
                 int mid = bot + (top - bot) / 2;
-                if(GetDateTime(employees[mid]) >= dateTime) {
+                if(ShouldSearchLeft(employees[mid], dateTime, striclyAfter)) {
                     top = mid;
                 }
                 else {
@@ -61,6 +61,17 @@ namespace Environment.Tasks {
         void GetEmployeesInRange(int low, int high, Employee[] employees, Employee[] inRange) {
             for(int i = low; i < high; i++) {
                inRange[i - low] = employees[i];
+                Debug.Log($"Employee {employees[i].name} is in range with last entrance at {employees[i].lastEntranceInEngineRoom}");
+            }
+        }
+
+        bool ShouldSearchLeft(Employee employee, DateTime dateTime, bool striclyAfter) {
+            DateTime employeeDateTime = GetDateTime(employee);
+            if(striclyAfter) {
+                return employeeDateTime > dateTime;
+            }
+            else {
+                return employeeDateTime >= dateTime;
             }
         }
 
