@@ -46,7 +46,7 @@ namespace Environment.Tasks {
                 GetEmployeesInRange(lowTimeIndex, highTimeIndex, sortedEmployees, inRange);
             }
             endTime = Time.realtimeSinceStartup;
-            Debug.Log((endTime -= startTime)/10000);
+            Debug.Log((endTime -= startTime));
         }
         int Search(string time, Employee[] employees, bool striclyAfter) { 
             DateTime dateTime = DateTime.Parse(time);
